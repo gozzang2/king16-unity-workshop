@@ -67,7 +67,6 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0f;
         _gameOverCanvas.SetActive(true);
-        SoundManager.Instance.PlaySfx("SFX/Common/game-over");
     }
 
     public void RestartGame()
@@ -81,6 +80,7 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0f;
         _gameClearCanvas.SetActive(true);
-        SoundManager.Instance.PlaySfx("SFX/Common/game-clear");
+        // TODO: game-clear 사운드로 변경
+        SoundManager.Instance.PlaySfx("SFX/Common/stage-clear");
     }
 }
